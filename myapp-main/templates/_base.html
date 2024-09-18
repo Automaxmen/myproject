@@ -1,0 +1,41 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>{% block title %}Untitled{% endblock %}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+	
+
+	{% compress css %}
+	<link rel="stylesheet"
+		href="{% static 'src/output.css' %}">
+	{% endcompress %}
+
+</head>
+
+<body>
+	<div class="container max-w-full">
+		<nav class="bg-yellow-500 p-4 flex justify-between font-sarabun"></nav>
+		<div class="flex items-center space-x-4">
+			<a  href="/" class="text-white">หน้าแรก</a>
+            <a  href="#" class="text-white">ตารางเทียบแคลอรี่</a>
+            <a  href="person/" class="text-white">ผู้จัดทำ</a>
+		</div>
+		{% block content %}
+		{% endblock content %}
+	</div>
+</body>
+
+</html>

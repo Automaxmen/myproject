@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Untitled{% endblock title %}</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@300;400;500&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-yellow-500 p-4 flex justify-between font-Sarabun">
+        <div class="flex items-center space-x-4">
+            <a  href="/" class="text-white">หน้าแรก</a>
+            <a  href="#" class="text-white">ตารางเทียบแคลอรี่</a>
+            <a  href="person/" class="text-white">ผู้จัดทำ</a>
+        </div>
+    </nav>
+
+    <!-- Heading Below Navigation -->
+    <h1 class="text-black text-3xl font-prompt underline text-center mt-4 font-prompt">
+        อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี
+    </h1>
+    
+    <div class="container mx-auto p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center ml-10 mt-10">
+                <img src="{% static 'img/card-05.jpg' %}" alt="Your Image" class="w-32 h-32 mt-14 rounded-full">
+            <h1 class="text-black text-4xl font-prompt mt-4 font-Mitr">
+                แกงเห็ดเผาะไข่มดแดง
+            </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">มีรสชาติกลมกล่อม เป็นอาหารที่ให้คุณค่าทางโภชนาการ </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">เห็ดเผาะมีโปรตีนและแร่ธาตุต่างๆและสรรพคุณทางยา</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ให้ประโยชน์ช่วยบำรุงร่างกาย ลดอาการร้อนใน เนื่องจากมีฤทธิ์เย็น </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">แก้ช้ำใน แก้ไข้ตัวร้อน ช่วยสมานแผล ลดอาการอักเสบและบวม</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ช่วยทำให้เลือดแข็งตัวได้เร็วขึ้น บรรเทาอาการคันตามร่างกาย</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">และยังมีส่วนช่วยยับยั้งการเกิดเซลล์มะเร็ง</h1> 
+            <a href="food1/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 font-Sarabun">เรียนรู้เพิ่มเติม »</a>
+            </div>
+            
+            <div class="flex flex-col items-center ml-10 mt-10">
+                <img src="{% static 'img/card-09.jpg' %}" alt="Your Image" class="w-32 h-32 mt-14 rounded-full">
+            <h1 class="text-black text-4xl font-prompt mt-4 font-Mitr">
+                แกงอ่อมหอยขม
+            </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">เป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพ </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ตามวิถีภูมิปัญญาท้องถิ่น ของจังหวัดอุบลราชธานี  </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ที่ได้สืบทอดกันมารุ่นต่อรุ่น เป็นแกงอ่อมอาหารพื้นเมือง</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">อุดมไปด้วยคุณค่าทางโภชนาการ</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">เพราะส่วนประกอบหลักส่วนใหญ่เป็นผักและสมุนไพร</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">และสมุนไพรพื้นบ้านนานาชนิด เป็นความผสมผสาน </h1> 
+            <h1 class="text-black text-base mt-2 font-Sarabun">ที่ลงตัวระหว่างชนิดของอาหาร และเครื่องปรุง </h1>
+            <a href="food2/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 font-Sarabun">เรียนรู้เพิ่มเติม »</a>
+            </div>
+            
+            <div class="flex flex-col items-center ml-10 mt-10">
+                <img src="{% static 'img/card-08.jpg' %}" alt="Your Image" class="w-32 h-32 mt-14 rounded-full">
+            <h1 class="text-black text-4xl font-prompt mt-4 font-Mitr">
+                ลาบปลาคัง
+            </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">อุดมไปด้วยโปรตีนสูง ไขมันต่ำ และจำเป็นต่อร่างกาย  </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ป้องกันการอุดตันในเส้นเลือด โรคหัวใจ   </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">และเส้นเลือดในสมองแตก ช่วยบำรุงเซลล์สมอง</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">เสริมสร้างผนังเซลล์ประสาทในสมองให้แข็งแรง </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ประกอบกับจังหวัดอุบลราชธานีมีแม่น้ำไหลผ่านถึง 3 สาย </h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">ได้แก่ แม่น้ำมูล แม่น้ำชี และแม่น้ำโขง  </h1> 
+            <h1 class="text-black text-base mt-2 font-Sarabun">จึงอุดมไปด้วยพันธุ์ปลานานาชนิด</h1>
+            <h1 class="text-black text-base mt-2 font-Sarabun">จึงได้รับสมญานามยกให้เป็นราชธานีแห่งปลาแซ่บหลาย</h1>
+            <a href="food3/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 font-Sarabun">เรียนรู้เพิ่มเติม »</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Block -->
+    <div class="container mx-auto my-8 px-4">
+        {% block content %}{% endblock content %}
+    </div>
+
+</body>
+</html>
